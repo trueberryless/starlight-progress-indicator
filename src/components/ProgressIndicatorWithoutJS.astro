@@ -1,0 +1,39 @@
+---
+---
+
+<style is:global>
+  body {
+    background:
+      linear-gradient(
+        to right top,
+        var(--sl-color-accent-high) 50%,
+        var(--sl-color-bg) 50%
+      ),
+      var(--sl-color-accent-high);
+    background-size:
+      100% calc(100% - 100vh + 0.25rem + 1px),
+      100% 100%;
+    background-position:
+      0 var(--sl-nav-height),
+      0 calc(100% - 100vh + 0.25rem + 1px + var(--sl-nav-height));
+    background-repeat: no-repeat;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: calc(var(--sl-nav-height) + 0.25rem);
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    background: var(--sl-color-bg);
+  }
+
+  .sidebar-pane {
+    margin-top: 0.25rem;
+  }
+
+  mobile-starlight-toc > nav {
+    margin-top: 0.25rem;
+  }
+</style>
